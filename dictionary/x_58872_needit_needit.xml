@@ -2,5 +2,27 @@
 <database>
     <element attributes="hasLabels=true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
         <element label="New field 2" max_length="40" name="new_field_2" type="integer"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
+        <element choice="1" default="Legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="choice">
+            <choice>
+                <element label="Facilities" value="facilities"/>
+                <element label="Human Resources" value="hr"/>
+                <element label="Legal" value="legal"/>
+                <element label="Your Department Choice" value="your_choice"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="u_request_type" choice_table="x_58872_needit_needit" label="What needed" mandatory="true" max_length="80" name="u_what_needed" type="choice">
+            <choice>
+                <element label="Facilities 1" value="facilities1"/>
+                <element label="Facilities 2" value="facilities2"/>
+                <element label="Human Resources 1" value="hr1"/>
+                <element label="Human Resources 2" value="hr2"/>
+                <element label="Legal 1" value="legal1"/>
+                <element label="Legal 2" value="legal2"/>
+                <element label="Your Department Choice 1" value="your_choice1"/>
+                <element label="Your Department Choice 2" value="your_choice2"/>
+            </choice>
+        </element>
+        <element label="When needed" max_length="40" name="when_needed" type="boolean"/>
     </element>
 </database>
