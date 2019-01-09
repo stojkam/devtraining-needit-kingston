@@ -12,7 +12,7 @@
                 <element label="Your Department Choice" value="your_choice"/>
             </choice>
         </element>
-        <element choice="1" choice_field="u_request_type" choice_table="x_58872_needit_needit" label="What needed" mandatory="true" max_length="80" name="u_what_needed" type="choice">
+        <element choice="1" choice_field="u_request_type" choice_table="x_58872_needit_needit" label="What needed" max_length="80" name="u_what_needed" type="choice">
             <choice>
                 <element label="Facilities" sequence="0" value="facilities"/>
                 <element label="Human Resources" sequence="1" value="hr"/>
